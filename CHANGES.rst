@@ -1,0 +1,53 @@
+# 1.0.1 - 15-0-2020
+
+## Unclassified Changes
+
+- new release workflow
+- added workflow for pullrequest
+- Add changes
+- fixed version in manifest
+- increased version in setup.py
+- add starting version
+- Merge branch 'master' of github.com:Silviu-Surcica/git_practice
+- increased version
+- new change
+- Add changes
+- remove version from manifest
+- renamed yml file
+- Add changes
+- fixed checkout and fetch refs
+- Add changes
+- increased version to 2.7
+- added manifest file
+- Add changes
+- release of 2.6
+- Add changes
+- increase version
+- just push changes instead of doing pr
+- create pull request for changes
+- trigger only on publish release
+- changed version
+- changed back to release
+- changed event type
+- trigger build
+- removed release types
+- added new change to trigger g a
+- modified the release type
+- change the trigger for github action
+- changed pypi password
+- changed conflicting name on pypi
+- added setup.py
+- use wheel to build the installer
+- fixed build command
+- added github actions workflow
+- 2 master
+- 1 master
+- second commit from master
+- added a.py from master
+- Revert "Revert "merged dev into master""
+- Revert "merged dev into master"
+- merged dev into master
+- commit from master
+- second commit on dev
+- first_commit
+
