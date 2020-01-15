@@ -37,6 +37,7 @@ jobs:
       uses: rubenfiszel/autochangelog-action@v0.11.0
       with:
         changelog_file: './CHANGES.rst'
+        manifest_file: './manifest.yml'
         dry_run: false
         tag_prefix: 'v'
     - name: Commit files
