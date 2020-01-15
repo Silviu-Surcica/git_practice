@@ -1,6 +1,8 @@
 name: Build and deploy to PyPI
 
-on: push
+on:
+  release:
+    types: [published]
 
 jobs:
   build-n-publish:
