@@ -1,3 +1,11 @@
+# 1.7.3 - 15-0-2020
+
+## Unclassified Changes
+
+- fixed version in manifest
+- increased version in setup.py
+- added setup.py
+
 # 0.0.1 - 15-0-2020
 
 ## Unclassified Changes
