@@ -25,7 +25,7 @@ jobs:
         --source
         --binary
         --out-dir dist/
-            .
+        .
     - name: Publish distribution 📦 to Test PyPI
       if: startsWith(github.event.ref, 'refs/tags')
       uses: pypa/gh-action-pypi-publish@master
