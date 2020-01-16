@@ -1,3 +1,9 @@
+# 2.1.1 - 16-0-2020
+
+## Unclassified Changes
+
+- include publish cu pypi
+
 # 2.1.0 - 16-0-2020
 ### Features
     
