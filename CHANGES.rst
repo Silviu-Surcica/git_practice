@@ -1,3 +1,11 @@
+# 2.0.0 - 16-0-2020
+
+## Breaking Changes
+
+### Features
+    
+- allow provided config object to extend other configs
+
 # 1.0.2 - 16-0-2020
 
 ## Unclassified Changes
