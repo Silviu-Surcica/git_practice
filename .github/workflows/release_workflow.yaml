@@ -29,6 +29,7 @@ jobs:
         with:
           name: ${{ steps.version.outputs.version }}
           tag: v${{ steps.version.outputs.version }}
+          commit: master
           draft: false
           prerelease: false
           # An optional tag for the release. If this is omitted the git ref will be used (if it is a tag).
