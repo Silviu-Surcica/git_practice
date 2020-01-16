@@ -1,3 +1,8 @@
+# 2.1.0 - 16-0-2020
+### Features
+    
+- added commit reference
+
 # 2.0.2 - 16-0-2020
 
 ## Unclassified Changes
