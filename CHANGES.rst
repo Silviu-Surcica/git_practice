@@ -1,3 +1,10 @@
+# 1.0.2 - 16-0-2020
+
+## Unclassified Changes
+
+- new change
+- BREAKING CHANGE: remove body from release
+
 # 1.0.1 - 15-0-2020
 
 ## Unclassified Changes
