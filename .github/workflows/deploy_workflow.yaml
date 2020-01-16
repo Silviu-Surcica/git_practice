@@ -2,7 +2,7 @@ name: Build and deploy to PyPI
 
 on:
   release:
-    types: [published]
+    types: [created]
 
 jobs:
   build-n-publish:
@@ -32,20 +32,3 @@ jobs:
       with:
         password: ${{ secrets.test_pypi_password }}
         repository_url: https://test.pypi.org/legacy/
-    - name: autochangelog-action
-      id: ac
-      uses: rubenfiszel/autochangelog-action@v0.11.0
-      with:
-        changelog_file: './CHANGES.rst'
-        manifest_file: './manifest.yml'
-        dry_run: false
-        tag_prefix: 'v'
-    - name: Commit files
-      run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
-        git commit -m "Add changes" -a
-    - name: Push changes
-      uses: ad-m/github-push-action@master
-      with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
