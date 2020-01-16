@@ -1,3 +1,9 @@
+# 2.0.1 - 16-0-2020
+
+## Unclassified Changes
+
+- integrated pypi upload
+
 # 2.0.0 - 16-0-2020
 
 ## Breaking Changes
