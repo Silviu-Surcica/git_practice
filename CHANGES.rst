@@ -1,3 +1,9 @@
+# 2.0.2 - 16-0-2020
+
+## Unclassified Changes
+
+- use all release actions
+
 # 2.0.1 - 16-0-2020
 
 ## Unclassified Changes
