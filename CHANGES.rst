@@ -1,3 +1,8 @@
+# 2.2.0 - 16-0-2020
+### Features
+    
+- take the version from manifest
+
 # 2.1.1 - 16-0-2020
 
 ## Unclassified Changes
