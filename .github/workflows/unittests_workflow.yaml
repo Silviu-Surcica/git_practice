@@ -21,6 +21,7 @@ jobs:
       - run: mkdir -p artifact
       - run: pip3 install -r requirements.txt && pytest tests --junitxml=artifact/unittest.results.xml
       - uses: actions/upload-artifact@v1
+        if: failure()
         with:
           name: my-artifact
           path: artifact
