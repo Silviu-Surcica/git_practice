@@ -19,9 +19,11 @@ jobs:
         with:
          python-version: 3.7
       - run: mkdir -p artifact
-      - run: pip3 install -r requirements.txt && pytest tests --junitxml=artifact/unittest.results.xml
+      - name: Run tests
+        run: >-
+         pip3 install -r requirements.txt && pytest tests --junitxml=artifact/unittest.results.xml
       - uses: actions/upload-artifact@v1
-        if: failure()
-        with:
-          name: my-artifact
-          path: artifact
+          if: failure()
+          with:
+            name: my-artifact
+            path: artifact
