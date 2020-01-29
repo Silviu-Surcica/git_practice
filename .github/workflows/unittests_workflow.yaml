@@ -19,11 +19,11 @@ jobs:
         with:
          python-version: 3.7
       - run: mkdir -p artifact
+      - run: echo hello > artifact/world.txt
       - uses: actions/upload-artifact@v1
         with:
           name: my-artifact
           path: artifact
-      - run: echo hello > artifact/world.txt
       - name: Run tests
         run: >-
          pip3 install -r requirements.txt && pytest tests --junitxml=artifact/unittest.results.xml
