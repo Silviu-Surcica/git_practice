@@ -46,6 +46,6 @@ jobs:
           pip install
           black
           --user
-      - run: export PATH=$PATH:/home/runner/.local/bin
+      - run: export PATH=$PATH:/home/runner/.local/bin/
       - run: black .
 
