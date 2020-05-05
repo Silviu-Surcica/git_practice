@@ -1,0 +1,14 @@
+name: test
+on:
+  push:
+    branches:
+      - '*'         # matches every branch
+      - '*/*'       # matches every branch containing a single '/'
+      - '!master'   # excludes master
+
+jobs:
+  push:
+    name: Push Container
+    runs-on: ubuntu-latest
+    steps:
+      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*

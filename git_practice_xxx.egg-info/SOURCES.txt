@@ -1,0 +1,6 @@
+README.md
+setup.py
+git_practice_xxx.egg-info/PKG-INFO
+git_practice_xxx.egg-info/SOURCES.txt
+git_practice_xxx.egg-info/dependency_links.txt
+git_practice_xxx.egg-info/top_level.txt
