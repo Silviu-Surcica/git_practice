@@ -29,22 +29,10 @@ jobs:
           --user
       - run: /home/runner/.local/bin/black .
       - name: Add and commit
-        uses: EndBug/add-and-commit@v4 # You can change this to use a specific version
+        uses: EndBug/add-and-commit@v4
         with:
-          # The name of the user that will be displayed as the author of the commit
-          # Default: author of the commit that triggered the run
-          author_name: Your Name
-
-          # The email of the user that will be displayed as the author of the commit
-          # Default: author of the commit that triggered the run
-          author_email: mail@example.com
-
-          # The message for the commit
-          # Default: 'Commit from GitHub Actions'
-          message: 'Your commit message'
-
+          message: 'Black formatting from Github Actions'
         env:
-          # This is necessary in order to push a commit to the repo
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
 
 
