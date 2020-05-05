@@ -36,6 +36,15 @@ jobs:
         env:
           # This is necessary in order to push a commit to the repo
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
-      - run: pip install black
+      - name: Set up Python 3.7
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.7
+          - name: Install dependencies
+            run: >-
+              python -m
+              pip install
+              black
+              --user
       - run: black .
 
