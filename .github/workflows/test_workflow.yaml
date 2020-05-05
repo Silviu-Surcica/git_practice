@@ -16,3 +16,4 @@ jobs:
         with:
           fetch-depth: '0'
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+      - run: git checkout test
