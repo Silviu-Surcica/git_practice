@@ -47,5 +47,5 @@ jobs:
           black
           --user
       - run: export PATH=$PATH:/home/runner/.local/bin/
-      - run: black .
+      - run: /home/runner/.local/bin/black .
 
