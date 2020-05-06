@@ -1,3 +1,22 @@
+# 2.2.3 - 6-5-2020
+
+## Unclassified Changes
+
+- Test ([#12](12))
+- .x
+- aasa
+- aasa
+- aasa
+- .x
+- move command
+- add artifact data
+- fixed path
+- fixed yaml
+- fix indent
+- change artifact path
+- upload artifact
+- save unittests results
+
 # 2.2.2 - 22-1-2020
 
 ## Unclassified Changes
