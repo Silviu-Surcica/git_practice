@@ -15,18 +15,22 @@ jobs:
         uses: actions/checkout@master
         with:
           fetch-depth: '0'
+
       - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
       - run: git checkout test
+
       - name: Set up Python 3.7
         uses: actions/setup-python@v1
         with:
           python-version: 3.7
+
       - name: Install dependencies
         run: >-
           python -m
           pip install
           black
           --user
+
       - name: get changed files
         id: getfile
         run: |
@@ -35,12 +39,14 @@ jobs:
       - name: echo output
         run: |
           echo ${{ steps.getfile.outputs.files }}
+
       - run: /home/runner/.local/bin/black ${{ steps.getfile.outputs.files }}
+
       - name: Add and commit
         uses: EndBug/add-and-commit@v4
         with:
          message: 'Black formatting from Github Actions'
         env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
