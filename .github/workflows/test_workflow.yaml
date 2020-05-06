@@ -31,7 +31,7 @@ jobs:
       - name: Get changed files
         id: getfile
         run: |
-          echo "::set-output name=files::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep .py | xargs)"
+          echo "::set-output name=files::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep .py$ | xargs)"
 
       - name: Echo output
         run: |
@@ -60,7 +60,7 @@ jobs:
       - name: Get changed files
         id: getfile
         run: |
-          echo "::set-output name=files::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep .py | xargs)"
+          echo "::set-output name=files::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep .py$ | xargs)"
 
       - name: Set up Python 3.7
         if: ${{ steps.getfile.outputs.files }}
