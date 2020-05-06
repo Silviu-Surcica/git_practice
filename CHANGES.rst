@@ -1,4 +1,17 @@
-# 2.2.1 - 16-0k-2020
+# 2.2.2 - 22-1-2020
+
+## Unclassified Changes
+
+- fixed version
+- make tests fail
+- use pytest
+- checkout code
+- another fix on action
+- fixed action
+- added workflow for unittests
+- testing new change
+
+# 2.2.1 - 16-0-2020
 
 ## Unclassified Changessss
 
