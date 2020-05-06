@@ -1,4 +1,4 @@
-name: test
+name: Run linters
 on:
   push:
     branches:
@@ -28,12 +28,12 @@ jobs:
           black
           --user
 
-      - name: get changed files
+      - name: Get changed files
         id: getfile
         run: |
           echo "::set-output name=files::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep .py | xargs)"
 
-      - name: echo output
+      - name: Echo output
         run: |
           echo ${{ steps.getfile.outputs.files }}
 
@@ -57,7 +57,7 @@ jobs:
         with:
           fetch-depth: '0'
 
-      - name: get changed files
+      - name: Get changed files
         id: getfile
         run: |
           echo "::set-output name=files::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep .py | xargs)"
@@ -76,12 +76,12 @@ jobs:
           pylint
           --user
 
-      - name: echo output
+      - name: Echo output
         if: ${{ steps.getfile.outputs.files }}
         run: |
           echo ${{ steps.getfile.outputs.files }}
 
-      - name: run pylint
+      - name: Run pylint
         if: ${{ steps.getfile.outputs.files }}
         run: /home/runner/.local/bin/pylint ${{ steps.getfile.outputs.files }}
 
