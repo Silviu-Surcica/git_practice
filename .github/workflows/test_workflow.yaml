@@ -27,13 +27,6 @@ jobs:
           pip install
           black
           --user
-      - run: /home/runner/.local/bin/black .
-      - name: Add and commit
-        uses: EndBug/add-and-commit@v4
-        with:
-          message: 'Black formatting from Github Actions'
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
       - name: get changed files
         id: getfile
         run: |
@@ -42,6 +35,12 @@ jobs:
       - name: echo output
         run: |
           echo ${{ steps.getfile.outputs.files }}
-
+      - run: /home/runner/.local/bin/black ${{ steps.getfile.outputs.files }}
+      - name: Add and commit
+        uses: EndBug/add-and-commit@v4
+        with:
+         message: 'Black formatting from Github Actions'
+        env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Leave this line unchanged
 
 
