@@ -1,11 +1,5 @@
-# first_commit
-# insert from master
-# dev insert
-# second insert from master
+"""
+These is a module
+"""
 
-# 1 master
-# 2 master#$@@as
-
-
-class B:
-    pass
+NEW_VAR = 1
