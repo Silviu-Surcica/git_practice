@@ -1,7 +1,5 @@
-# first_commit
-# insert from master
-# dev insert
-# second insert from master
+"""
+These is a module example 1
+"""
 
-# 1 master
-# 2 master#$
+NEW_VAR = 1
