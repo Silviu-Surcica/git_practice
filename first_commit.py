@@ -5,3 +5,7 @@
 
 # 1 master
 # 2 master#$@@as
+
+
+class B:
+    pass
