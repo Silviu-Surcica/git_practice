@@ -40,4 +40,7 @@ jobs:
         run: |
           echo ${{ steps.getfile.outputs.files }}
 
-      - run: /home/runner/.local/bin/pylint ${{ steps.getfile.outputs.files }}
+      - name: run pylint
+        if: ${{ steps.getfile.outputs.files }}
+        run: /home/runner/.local/bin/pylint ${{ steps.getfile.outputs.files }}
+        
