@@ -1,6 +1,6 @@
 # 2.2.1 - 16-0k-2020
 
-## Unclassified Changes
+## Unclassified Changess
 
 - install missing dependency
 
