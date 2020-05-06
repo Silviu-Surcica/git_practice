@@ -1,5 +1,5 @@
 """
-These is a module
+These is a module example
 """
 
 NEW_VAR = 1
