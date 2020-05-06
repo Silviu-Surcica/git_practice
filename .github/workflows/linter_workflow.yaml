@@ -16,10 +16,6 @@ jobs:
         with:
           fetch-depth: '0'
 
-      - run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
-      - run: echo $(git status)
-      - run: git checkout test
-
       - name: get changed files
         id: getfile
         run: |
