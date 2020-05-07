@@ -37,7 +37,7 @@ jobs:
         run: |
           echo ${{ steps.getfile.outputs.files }}
 
-      - run: /home/runner/.local/bin/black ${{ steps.getfile.outputs.files }}
+      - run: /home/runner/.local/bin/black -l 80 -t py27 ${{ steps.getfile.outputs.files }}
 
       - name: Add and commit
         uses: EndBug/add-and-commit@v4
@@ -83,5 +83,5 @@ jobs:
 
       - name: Run pylint
         if: ${{ steps.getfile.outputs.files }}
-        run: /home/runner/.local/bin/pylint ${{ steps.getfile.outputs.files }}
+        run: /home/runner/.local/bin/flake8 --exclude "Dockerfile,CODEOWNERS,*.sql,README,*.c,Jenkinsfile,alembic,*.pem,*.json,*.css,*.html,*.js,*.ini,*.md,*.txt,.svn,CVS,.bzr,.hg,.git,__pycache__,.tox,*test*"   ${{ steps.getfile.outputs.files }}
 
