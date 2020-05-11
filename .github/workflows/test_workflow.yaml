@@ -19,6 +19,8 @@ jobs:
           # a Personal Access Token instead of secrets.GITHUB_TOKEN
           # so that tag pushes trigger repo push events.
           token: ${{ secrets.GENERAL_TOKEN }}
+        run: |
+          git fetch --no-tags --prune --depth=1 origin +refs/heads/*:refs/remotes/origin/*
 
       - name: Set up Python 3.7
         uses: actions/setup-python@v1
