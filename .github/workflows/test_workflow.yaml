@@ -31,7 +31,7 @@ jobs:
           pip install
           black
           --user
-
+      - run : echo ${{ github.event.before }} && echo ${{ github.sha }}
       - name: Get changed files
         id: getfile
         run: |
