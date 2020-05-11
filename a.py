@@ -1,4 +1,4 @@
-# commit from masterssssz
+print(a)
 
 
 def a(b, c, d):
