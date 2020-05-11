@@ -38,13 +38,15 @@ jobs:
           echo ${{ steps.getfile.outputs.files }}
 
       - run: /home/runner/.local/bin/black -l 80 -t py27 ${{ steps.getfile.outputs.files }}
+      - run: |
+          git add . && git commit -m 'Black formatting from Github Actions' && git push
 
-      - name: Add and commit
-        uses: EndBug/add-and-commit@v4
-        with:
-         message: 'Black formatting from Github Actions'
-        env:
-         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#      - name: Add and commit
+#        uses: EndBug/add-and-commit@v4
+#        with:
+#         message: 'Black formatting from Github Actions'
+#        env:
+#         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 
   flake8:
@@ -56,7 +58,7 @@ jobs:
         uses: actions/checkout@master
         with:
           fetch-depth: '0'
-      - run: git pull
+#      - run: git pull
       - name: Get changed files
         id: getfile
         run: |
