@@ -35,7 +35,7 @@ jobs:
       - name: Get changed files
         id: getfile
         run: |
-          echo "::set-output name=files::$(git diff --name-only master $(git symbolic-ref --short HEAD) | grep .py$ | xargs)"
+          echo "::set-output name=files::$(git diff --name-only origin/master $(git symbolic-ref --short HEAD) | grep .py$ | xargs)"
 
       - name: Echo output
         run: |
