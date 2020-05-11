@@ -40,7 +40,7 @@ jobs:
       - run: /home/runner/.local/bin/black -l 80 -t py27 ${{ steps.getfile.outputs.files }}
       - run: |
            git config --global user.email "silviu.surcica@solarwinds.com" && git config --global user.name "Your Name" && git add . && git commit -m 'Black formatting from Github Actions' && git push
-        if: succeeded() || failed()
+        continue-on-error: true
 #      - name: Add and commit
 #        uses: EndBug/add-and-commit@v4
 #        with:
